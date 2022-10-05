@@ -1,14 +1,27 @@
 import React from "react";
 import { Card, Title, Paragraph } from "react-native-paper";
 import styled from "styled-components";
+import {fontSizes} from "../../../infrastructure/theme/fonts";
 
 const RestaurantCard = styled(Card)`
-  padding: 16px;
+  padding: ${(props) => props.theme.space[3]};
 `
 
 const CardContent = styled(Card.Content)`
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: ${(props) => props.theme.space[0]};
+  padding-right: ${(props) => props.theme.space[0]};
+`
+
+const CardTitle = styled(Title)`
+  color: ${(props) => props.theme.colors.ui.primary};
+  margin-top: ${(props) => props.theme.space[3]};
+  font-family: ${(props) => props.theme.fonts.heading};
+  font-size: ${(props) => props.theme.fontSizes.title};
+`
+
+const CardParagraph = styled(Paragraph)`
+  font-family: ${(props) => props.theme.fonts.body};
+  font-size: ${(props) => props.theme.fontSizes.caption};
 `
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
@@ -27,8 +40,8 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     <RestaurantCard>
       <Card.Cover key={name} source={{ uri: photos[0] }} />
       <CardContent>
-        <Title>{name}</Title>
-        <Paragraph>{address}</Paragraph>
+        <CardTitle>{name}</CardTitle>
+        <CardParagraph>{address}</CardParagraph>
       </CardContent>
     </RestaurantCard>
   );
