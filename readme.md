@@ -12,5 +12,9 @@ To run with android, an android virtual device has to be started first
 
 We use React native pape for materials.
 https://callstack.github.io/react-native-paper/index.html
-See example on expo https://snack.expo.dev/?platform=ios
+See example on expo https://snack.expo.dev/?platform=ios. 
+
+Also using styled component,
+info can be found here: https://styled-components.com/docs/basics
+
 
