@@ -17,4 +17,8 @@ See example on expo https://snack.expo.dev/?platform=ios.
 Also using styled component,
 info can be found here: https://styled-components.com/docs/basics
 
+Fonts, using expo-font: https://docs.expo.dev/versions/latest/sdk/font/
+
+For svg, we use react-native-svg: https://github.com/react-native-svg/react-native-svg
+
 
